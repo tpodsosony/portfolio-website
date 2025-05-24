@@ -1,0 +1,17 @@
+div.container {
+
+	border-radius: 5px;
+	border-color: #e21515;
+	/* border-style: solid; */
+	margin: auto;
+	padding-left: 1%;
+	width: 50%;
+	height: 100%;
+	justify-content: center;
+	background-color:#3d3939;
+	color: rgb(236, 236, 236);
+}
+
+body{
+	background-color: rgb(1, 1, 43);
+}
