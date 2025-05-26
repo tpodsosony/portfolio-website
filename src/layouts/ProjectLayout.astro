@@ -1,0 +1,20 @@
+---
+import Layout from './Layout.astro';
+
+const { frontmatter } = Astro.props;
+---
+<Layout>
+<p>Published on: {frontmatter.pubDate.toString().slice(0,10)}</p>
+<p><em>{frontmatter.description}</em></p>
+<p>Written by: {frontmatter.author}</p>
+<div class="line-1"></div>
+
+<slot />
+</Layout>
+
+<style>
+    .line-1 {
+  height: 1px;
+  background: black;
+}
+</style>
