@@ -3,6 +3,9 @@ import Layout from './Layout.astro';
 
 const { frontmatter } = Astro.props;
 ---
+
+<a href="javascript:history.back()">Go Back</a>
+
 <Layout>
 <p>Published on: {frontmatter.pubDate.toString().slice(0,10)}</p>
 <p><em>{frontmatter.description}</em></p>
