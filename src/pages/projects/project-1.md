@@ -1,28 +1,26 @@
 ---
 layout: ../../layouts/ProjectLayout.astro
 
-title: 'Malazan Rant'
+title: 'Mock eCommerce Website'
 pubDate: 2025-05-22
-description: 'MalaFRICKINGzan!!'
+description: 'Website that I had created in Ruby on Rails for a school assignment'
 author: 'Malazan Lover'
 image:
     url: 'https://docs.astro.build/assets/rose.webp'
     alt: 'The Astro logo on a dark background with a pink glow.'
-tags: ["Malazan", "Karsa Orlong", "House of Chains"]
+
 ---
 
+In a full stack development course in college, I had made a fully functional eCommerce website using Ruby on Rails.
+While you may say, "Tal, this website is really ugly!", I'd say your wrong and cry later so please don't say that. 
 
-Welcome to my first rendition of ranting about my obsessions
 
-#### House of Chains mid chapter 3
+Without further ado, here's the title page for all you nice people :
 
-_Holy shit_. Karsa. **Karsa Orlong!!**  
-  This giant may be up there with the Pannion Seer in being one of the most despicable characters Erikson has ever written.  I should not like this guy at all, but the way Erikson has written this barbarian is so damn interesting.  
-Karsa treats everyone around him poorly, he thinks he's owed everything in life, and has this whole idea of "honor" that even upsets other Toblai in his clan, an already brutal society that encourages these pillages. I can't help but get excited about his action scenes, or the way he calls humans "children" because of how much smaller they are comapred to him. His blood wood is awesome and I love the concept of blood oil sharpening the blades to the point they can shred through metals.
+![eCommerce website title page!!](../../assets/eCommerceProject/TitlePage.png)
 
-The little tidbits of Toblai past we've been hearing have really struck out to me. From what I could gather, the Toblai had eventually become more a more nomadic tribe, having settled down and lost their past of barbarianism. Then they had some sort of conflict with the T'lan Imass around 900 years before the current Karsa story line, where Icarium and Calm (the Forkul Assail) essentially told the Toblai to go back to the old ways of pillaging. Here is where I believe the seven faces of rock were created as symbols of worship. 
+While the first few books there are of the Malazan series, there are over a 1000 book titles randomly generated through the faker ruby gem.
+A lot of the work here was primarily done through gem integrations, something that I greatly appreciate about ruby. It's very easy to
+find a gem for whatever idea you may have. The gem does the brunt of the work, while you mainly have to figure out how to integrate you're work into them. They tend to offer enough flexability that really you can just use many as templates for whatever it is you want.   
 
-Karsa post the Silver Lake massacre has been a lot more interesting to me. He's started question his peoples entire past with the above information and learning of his grandfathers lies. There was a bit where he almost respected his pacifist father, but he chased that thought away.  The Faces of Rock investment in Karsa as a harbinger of their will maybe led to the warren that him and Tarvold Nom are in? I do want to preface this all by saying that the storm of chains might be the coolest visual ever. Super excited to learn more about the Warren as I read :).
-
-That's it for now! More Tal Malazan rants in the future!
 

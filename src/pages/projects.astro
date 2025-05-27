@@ -10,6 +10,6 @@ const allProjects = Object.values(import.meta.glob('./projects/*.md', { eager: t
 		Hey chat tal here in projects
 	</p>
 	<ul>
-      {allProjects.map((post: any) => <ProjectPost url={post.url} title={post.frontmatter.title}/>)}
+      {allProjects.map((post: any) => <ProjectPost url={post.url} title={post.frontmatter.title} description = {post.frontmatter.description}/>)}
     </ul>
 </Layout>

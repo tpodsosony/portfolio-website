@@ -3,13 +3,19 @@ import Layout from './Layout.astro';
 
 const { frontmatter } = Astro.props;
 ---
-
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<title>Midnight Tides</title>
+	</head>
 <a href="javascript:history.back()">Go Back</a>
 
 <Layout>
 <p>Published on: {frontmatter.pubDate.toString().slice(0,10)}</p>
 <p><em>{frontmatter.description}</em></p>
-<p>Written by: {frontmatter.author}</p>
 <div class="line-1"></div>
 
 <slot />
