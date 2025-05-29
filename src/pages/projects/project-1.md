@@ -8,7 +8,7 @@ author: 'Malazan Lover'
 image:
     url: 'https://docs.astro.build/assets/rose.webp'
     alt: 'The Astro logo on a dark background with a pink glow.'
-
+tags: ["astro", "blogging", "learning in public"]
 ---
 
 In a full stack development course in college, I had made a fully functional eCommerce website using Ruby on Rails.
