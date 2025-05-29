@@ -3,9 +3,10 @@ import Layout from '../layouts/Layout.astro';
 import ProjectPost from '../components/ProjectPost.astro';
 
 const allProjects = Object.values(import.meta.glob('./projects/*.md', { eager: true }));
+const pageTitle = "Projects";
 ---
 
-<Layout>
+<Layout pageTitle = {pageTitle}>
 	<p>
 		Hey chat tal here in projects
 	</p>

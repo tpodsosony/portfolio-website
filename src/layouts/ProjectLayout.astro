@@ -11,7 +11,7 @@ const { frontmatter } = Astro.props;
 		<meta name="generator" content={Astro.generator} />
 		<title>Midnight Tides</title>
 	</head>
-<a href="javascript:history.back()">Go Back</a>
+<a href={"javascript:history.back()"}>Go Back</a>
 
 <Layout>
 <p>Published on: {frontmatter.pubDate.toString().slice(0,10)}</p>
@@ -20,6 +20,8 @@ const { frontmatter } = Astro.props;
 
 <slot />
 </Layout>
+
+<a href={"javascript:history.back()"}>Go Back</a>
 
 <style>
     .line-1 {
