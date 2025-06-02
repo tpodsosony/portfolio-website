@@ -17,6 +17,7 @@ const { frontmatter } = Astro.props;
 <p>Published on: {frontmatter.pubDate.toString().slice(0,10)}</p>
 <p><em>{frontmatter.description}</em></p>
 <div class="line-1"></div>
+<a href={frontmatter.link}>GitHub link</a>
 
 <slot />
 </Layout>

@@ -9,6 +9,7 @@ image:
     url: 'https://docs.astro.build/assets/rose.webp'
     alt: 'The Astro logo on a dark background with a pink glow.'
 tag: 'Ruby on Rails'
+link: 'https://github.com/tpodsosony/ecommerceProject'
 ---
 
 In a full stack development course in college, I had made a fully functional eCommerce website using Ruby on Rails.
