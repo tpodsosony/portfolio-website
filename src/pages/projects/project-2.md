@@ -1,14 +1,15 @@
 ---
 layout: ../../layouts/ProjectLayout.astro
 
-title: 'Soon to be added'
-pubDate: 2025-05-22
-description: 'TBA'
-author: 'Malazan Lover'
+title: 'RogueLike'
+pubDate: 2025-06-02
+description: 'A roguelike created in Python using the TCOD library'
+author: 'Tal'
 image:
     url: 'https://docs.astro.build/assets/rose.webp'
     alt: 'The Astro logo on a dark background with a pink glow.'
-tags: ["astro", "blogging", "learning in public"]
+tag: 'Python'
+link: 'https://github.com/tpodsosony/Roguelike'
 ---
 
-Yup
+This project was how I taught myself Python! I ended up following a [tutorial](https://rogueliketutorials.com/) and writing my own notes as it went allong

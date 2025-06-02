@@ -1,9 +1,20 @@
+---
+const { pathname } = Astro.url;
+---
+
 <div class="nav-links">
     <ul>
-        <li><a href="/">Home</a></li>
-        <li><a href="/projects/">Projects</a></li>
-        <li><a href="/blog/">Blog</a></li>
-        <li><a href="/links/">Links</a></li>
+        <li><a class={pathname.slice(1) === '' ? 'active' : ''} href="/">Home</a></li>
+        <li><a class={pathname.slice(1) === 'projects/' ? 'active' : ''} href="/projects/">Projects</a></li>
+        <li><a class={pathname.slice(1) === 'blog/' ? 'active' : ''} href="/blog/">Blog</a></li>
+        <li><a class={pathname.slice(1) === 'links/' ? 'active' : ''} href="/links/">Links</a></li>
+        <li><a class={pathname.slice(1) === 'interests/' ? 'active' : ''} href="/interests/">Interests</a></li>
     </ul>
     
 </div>
+
+<style>
+    .active{
+        text-decoration: underline solid rgb(93, 3, 3);
+    }
+</style>
