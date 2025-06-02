@@ -1,29 +1,43 @@
 ---
-const {title, url, description} = Astro.props;
-
+const {title, url, description, tag} = Astro.props;
 ---
 
-<li  class = "projectPost" ><a href = {url}>
-        <h3>{title}</h3>
-        <p>
-            {description}
-        </p>
+<li  class = "projectPost" >
+    <a href = {url}>
+        {title}
+        <small>{tag}</small> 
     </a>
+    
 </li>
+<small>
+            {description}
+</small>
 
 <style>
-    .projectPost :hover{
-        background-color: rgb(30, 30, 30);
-    }
-
     .projectPost {
         display: flex;
-        flex-direction: column;
-        text-indent: 30px;
+        flex-direction: row; 
+        list-style-type: none;
+        justify-content: space-between;
 
     }
-    .projectPost p {
-        font-size: 12px;
-        display: inline-block;
+    .projectPost h3{
+        padding-right: 2px;
+        padding-bottom: 0px;
+        order: 2;
+    }
+
+    .projectPost a small{
+        background-color: rgb(244, 255, 251);
+        border: 1px solid;
+        border-radius: 5px;
+        color: black;
+    }      
+    .projectPost a {
+        color:rgb(171, 211, 246);
+    }
+
+    .projectPost a:hover{
+        color:rgb(8, 131, 90);
     }
 </style>

@@ -11,6 +11,6 @@ const pageTitle = "Projects";
 		Hey chat tal here in projects
 	</p>
 	<ul>
-      {allProjects.map((post: any) => <ProjectPost url={post.url} title={post.frontmatter.title} description = {post.frontmatter.description}/>)}
+      {allProjects.map((post: any) => <ProjectPost url={post.url} title={post.frontmatter.title} description = {post.frontmatter.description} tag={post.frontmatter.tag}/>)}
     </ul>
 </Layout>

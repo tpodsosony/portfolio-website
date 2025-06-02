@@ -16,7 +16,8 @@ const {pageTitle} = Astro.props;
 	<body>
 		<Header/>
 		<div class = "container">
-			
+			<h4>{pageTitle}</h4>
+			<div class = "line-1"></div>
 			<slot />
 		</div>
 		<Sidebar />

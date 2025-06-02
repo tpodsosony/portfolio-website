@@ -1,14 +1,14 @@
 ---
 layout: ../../layouts/ProjectLayout.astro
 
-title: 'Mock eCommerce Website'
+title: 'E-Commerce Website'
 pubDate: 2025-05-22
 description: 'Website that I had created in Ruby on Rails for a school assignment'
 author: 'Malazan Lover'
 image:
     url: 'https://docs.astro.build/assets/rose.webp'
     alt: 'The Astro logo on a dark background with a pink glow.'
-tags: ["astro", "blogging", "learning in public"]
+tag: 'Ruby on Rails'
 ---
 
 In a full stack development course in college, I had made a fully functional eCommerce website using Ruby on Rails.
