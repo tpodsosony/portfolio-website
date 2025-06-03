@@ -1,0 +1,28 @@
+---
+const {title, url} = Astro.props;
+---
+
+<li  class = "projectPost" >
+    <a href = {url}>
+        {title}
+    </a>
+    
+</li>
+
+<style>
+    .projectPost {
+        display: flex;
+        flex-direction: row; 
+        list-style-type: none;
+        justify-content: space-between;
+        padding: 0;
+    }
+        
+    .projectPost a {
+        color:rgb(171, 211, 246);
+    }
+
+    .projectPost a:hover{
+        color:rgb(8, 131, 90);
+    }
+</style>

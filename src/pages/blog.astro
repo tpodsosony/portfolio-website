@@ -1,10 +1,19 @@
 ---
 import Layout from '../layouts/Layout.astro';
-const pageTitle = "Blog";
+import BlogPost from '../components/blogPost.astro';
+
+const allProjects = Object.values(import.meta.glob('./blogs/*.mdx', { eager: true }));
+const pageTitle = "Blogs";
 ---
 
-<Layout pageTitle={pageTitle}>
-	<p>
-		Hey chat tal here in blog
-	</p>
+<Layout pageTitle = {pageTitle}>
+	<ul>
+      {allProjects.map((post: any) => <BlogPost url={post.url} title={post.frontmatter.title}/>)}
+    </ul>
 </Layout>
+
+<style>
+	ul{
+		padding-inline-start: 0;
+	}
+</style>
