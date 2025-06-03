@@ -2,6 +2,7 @@
 import '../styles/global.css';
 import Sidebar from '../components/sidebar.astro';
 import Header from '../components/Header.astro';
+import Topnav from '../components/topnav.astro';
 const {pageTitle} = Astro.props;
 ---
 <!doctype html>
@@ -15,12 +16,13 @@ const {pageTitle} = Astro.props;
 	</head>
 	<body>
 		<Header/>
+		<div class = top><Topnav/></div>
 		<div class = "container">
 			<h4>{pageTitle}</h4>
 			<div class = "line-1"></div>
 			<slot />
 		</div>
-		<Sidebar />
+		<div class = side><Sidebar/></div>
 		
 	</body>
 	
@@ -30,5 +32,22 @@ const {pageTitle} = Astro.props;
 	h4{
 		text-align: center;
 	}
+
+@media only screen and (max-width: 1000px) {
+  .top{
+	display: inline-block;
+  }
+  .side{
+	display: none;
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  .top{
+	display: none;
+  }
+}
+
+	
 </style>
 

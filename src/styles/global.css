@@ -27,13 +27,13 @@ a {
   text-decoration: none;
 }
 
-.nav-links{
+/* .nav-links{
         padding: 6px 8px 6px 16px;
         text-decoration: none;
         font-size: 18px;
         display: block;
 		
-}
+} */
 
 .nav-links ul{
 	list-style-type: none;
@@ -56,3 +56,6 @@ img{
 	height: auto;
 }
 
+@media only screen and (max-width: 1000px) {
+  
+}
