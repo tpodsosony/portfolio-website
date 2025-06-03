@@ -27,21 +27,6 @@ a {
   text-decoration: none;
 }
 
-/* .nav-links{
-        padding: 6px 8px 6px 16px;
-        text-decoration: none;
-        font-size: 18px;
-        display: block;
-		
-} */
-
-.nav-links ul{
-	list-style-type: none;
-  	margin: 100px;
-  	padding: 1px;
-	line-height: 40px;
-}
-
 a:hover{
 	color: rgb(0, 250, 250);
 }

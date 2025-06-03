@@ -16,7 +16,7 @@ const {pageTitle} = Astro.props;
 	</head>
 	<body>
 		<Header/>
-		<div class = top><Topnav/></div>
+		<Topnav/>
 		<div class = "container">
 			<h4>{pageTitle}</h4>
 			<div class = "line-1"></div>
@@ -32,21 +32,6 @@ const {pageTitle} = Astro.props;
 	h4{
 		text-align: center;
 	}
-
-@media only screen and (max-width: 1000px) {
-  .top{
-	display: inline-block;
-  }
-  .side{
-	display: none;
-  }
-}
-
-@media only screen and (min-width: 1000px) {
-  .top{
-	display: none;
-  }
-}
 
 	
 </style>

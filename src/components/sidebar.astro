@@ -12,7 +12,7 @@ import Navigation from "./navigation.astro";
   width: 150px;
   
   position: fixed;
-  margin-right: 15%;
+  margin-right: 10%;
   top: 0;
   right: 0;
   padding-top: 80px;
@@ -27,5 +27,10 @@ import Navigation from "./navigation.astro";
   /* display: block; */
 } 
 
+@media only screen and (max-width: 1000px) {
+  .sidebar{
+	display: none;
+  }
+}
 
 </style>
