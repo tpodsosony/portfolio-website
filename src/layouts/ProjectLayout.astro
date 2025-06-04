@@ -11,7 +11,7 @@ const { frontmatter } = Astro.props;
 		<meta name="generator" content={Astro.generator} />
 		<title>Midnight Tides</title>
 	</head>
-<a href={"javascript:history.back()"}>Go Back</a>
+<a class="goBack">Go back</a>
 
 <Layout>
 <p>Published on: {frontmatter.pubDate.toString().slice(0,10)}</p>
@@ -23,11 +23,30 @@ const { frontmatter } = Astro.props;
 <slot />
 </Layout>
 
-<a href={"javascript:history.back()"}>Go Back</a>
-
 <style>
     .line-1 {
   height: 1px;
   background: rgb(2, 64, 146);
-}
+	}
+
+  a.goBack{
+	position: fixed;
+	top:0;
+	left:0;
+	margin-top: 20%;
+	margin-left: 20%;
+  }
 </style>
+
+<script>
+  const buttons = document.querySelectorAll('a.goBack');
+
+  buttons.forEach((button) => {
+    button.addEventListener('click', () => {
+     history.back()
+    });
+  });
+</script>
+
+  
+
