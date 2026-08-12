@@ -2,7 +2,8 @@
 import '../styles/jackfrost.css';
 
 import SlowText from '../components/slowText.astro';
-import JackFrost from '../assets/jackFrost/JFSprite.gif'; 
+import JackFrost from '../assets/jackFrost/JFSprite.gif';
+import DialogueButton from '../components/dialogueButton.astro';
 ---
 <!doctype html>
 <html lang="en">
@@ -13,12 +14,18 @@ import JackFrost from '../assets/jackFrost/JFSprite.gif';
 		<meta name="generator" content={Astro.generator} />
 		<title>Hee-Ho!</title>
 	</head>
+	
 <body>
     <div class = "container">
         <img src={JackFrost.src} alt = "this is an image" class = "jfGif"></>
         </br>
-        Do you care about others, ho?
-        <SlowText message = "From this day forwards, you and I are hee-homeboys!", buttonTxt = "I don't give a hee-ho!"/>
+        <SlowText message = "Who cares about others, ho???"/>
+        <DialogueButton buttonTxt = 'I dont give a hee-ho!', idName = "dumb">
+            <SlowText message = "From this day forwards, you and I are hee-homeboys!", id= "heeho!", targetid = "dumb"/>
+        </DialogueButton>
+        <DialogueButton buttonTxt = 'hee-ho!', idName = "div.button">
+            <SlowText message = "Hee-ho!!!!", id = "tags", targetid = "div.button"/>
+        </DialogueButton>
 
     </div>
 </body>

@@ -1,16 +1,14 @@
 ---
-const { message = 'Hee-Ho!', buttonTxt = 'Undefined'} = Astro.props;
+const { message = 'Hee-Ho!', id = 'Undefined', targetid = 'Undefined'} = Astro.props;
 import '../styles/jackfrost.css';
+import DialogueButton from '../components/dialogueButton.astro';
 
 ---
 
 <!-- Store the message prop as a data attribute. -->
-<slow-text data-message={message}>
-    <div class = "button">
-        {buttonTxt}
-    </div>
+<slow-text data-message={message} data-id={id} data-targetid = {targetid}>
 </slow-text>
-<p id = 'target'></p>
+<p id = {id}></p>
 
 
 <script>
@@ -20,19 +18,27 @@ import '../styles/jackfrost.css';
     connectedCallback() {
       var curr = 0;
       var message = this.dataset.message || "Undefined";
+      var id = this.dataset.id || "Undefined";
+      var targetid = this.dataset.targetid || "Undefined";
 
       var Write = function write(){
-          var elem = document.getElementById('target');
+          var elem = document.getElementById(id);
           elem.textContent += message.charAt(curr);
           curr++;
           if (curr < message.length)
               window.setTimeout(write, 50);
       };
       // Read the message from the data attribute.
-      const button = this.querySelector('div');
-      button?.addEventListener('click', () => {
+      if (targetid === 'Undefined'){
         Write();
-      });
+      }
+      else{
+        const button = document.getElementById(targetid);
+        button?.addEventListener('click', () => {
+        Write();
+        });
+      }
+        
     }
   }
 
