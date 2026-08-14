@@ -1,9 +1,9 @@
 ---
-const {buttonTxt = 'Undefined', idName = "Undefined"} = Astro.props;
+const {buttonTxt = 'Undefined', id: idName, ...rest} = Astro.props;
 import '../styles/jackfrost.css';
 
 ---
-<div class = "button" id = {idName}>
+<div class = "button" id = {idName} {...rest}>
     {buttonTxt}
 </div>
 <slot />
@@ -24,5 +24,6 @@ import '../styles/jackfrost.css';
         transform: translateY(5px);
         box-shadow: 0px 5px black, 0px -5px black, 5px 0px black, -5px 0px black,inset 0px 5px #00000038;
     }
+
 </style>
 

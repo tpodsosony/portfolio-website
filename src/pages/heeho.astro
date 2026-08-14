@@ -20,10 +20,10 @@ import DialogueButton from '../components/dialogueButton.astro';
         <img src={JackFrost.src} alt = "this is an image" class = "jfGif"></>
         </br>
         <SlowText message = "Who cares about others, ho???"/>
-        <DialogueButton buttonTxt = 'I dont give a hee-ho!', idName = "dumb">
+        <DialogueButton buttonTxt = 'I dont give a hee-ho!', id = "dumb">
             <SlowText message = "From this day forwards, you and I are hee-homeboys!", id= "heeho!", targetid = "dumb"/>
         </DialogueButton>
-        <DialogueButton buttonTxt = 'hee-ho!', idName = "div.button">
+        <DialogueButton buttonTxt = 'hee-ho!', id = "div.button">
             <SlowText message = "Hee-ho!!!!", id = "tags", targetid = "div.button"/>
         </DialogueButton>
 
@@ -43,5 +43,9 @@ import DialogueButton from '../components/dialogueButton.astro';
     .container{
         text-align: center;
     }
+    #dumb{
+        display:none;
+    }
+    
 
 </style>
