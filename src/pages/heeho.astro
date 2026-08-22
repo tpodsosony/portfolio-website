@@ -4,6 +4,9 @@ import '../styles/jackfrost.css';
 import SlowText from '../components/slowText.astro';
 import JackFrost from '../assets/jackFrost/JFSprite.gif';
 import DialogueButton from '../components/dialogueButton.astro';
+
+const dialogueFistbump = ["fistbump", "no"];
+
 ---
 <!doctype html>
 <html lang="en">
@@ -19,16 +22,33 @@ import DialogueButton from '../components/dialogueButton.astro';
     <div class = "container">
         <img src={JackFrost.src} alt = "this is an image" class = "jfGif"></>
         </br>
-        <SlowText message = "Who cares about others, ho???"/>
-        <DialogueButton buttonTxt = 'I dont give a hee-ho!', id = "dumb">
-            <SlowText message = "From this day forwards, you and I are hee-homeboys!", id= "heeho!", targetid = "dumb"/>
+        <SlowText message = "I've been mea-hee-ning to get to know you better! Put 'er there, ho! "/>
+        <DialogueButton buttonTxt = 'Sure', id = {dialogueFistbump[0]}>
+          <SlowText message = "(You shook hands with the demon... A piece of paper was left in your hand. It says, 'Sucker!') ", id= "heeho!", targetid = {dialogueFistbump[0]}/>
         </DialogueButton>
-        <DialogueButton buttonTxt = 'hee-ho!', id = "div.button">
-            <SlowText message = "Hee-ho!!!!", id = "tags", targetid = "div.button"/>
+        <DialogueButton buttonTxt = 'Let&apos;s not.', id = {dialogueFistbump[1]}>
+            <SlowText message = "Do you have a heart of stone or something? Who wouldn't wanna shake hands with me, ho!? Maybe this will get you to open up, ho.", id = "tags", targetid = {dialogueFistbump[1]}/>
         </DialogueButton>
 
     </div>
 </body>
+
+<script>
+function hideDialogue() {
+    var options = document.querySelectorAll('.button');
+  options.forEach(options => {
+          options.style.display = 'none';
+      });
+}
+
+let elements = document.querySelectorAll('.button');
+
+elements.forEach((item) => {
+    item.addEventListener('click', () => {
+      hideDialogue();
+    })
+});
+</script>
 
 <style>
     body{
@@ -43,9 +63,5 @@ import DialogueButton from '../components/dialogueButton.astro';
     .container{
         text-align: center;
     }
-    #dumb{
-        display:none;
-    }
-    
 
 </style>

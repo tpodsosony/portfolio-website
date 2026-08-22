@@ -1,14 +1,14 @@
 ---
-const { message = 'Hee-Ho!', id = 'Undefined', targetid = 'Undefined'} = Astro.props;
+const { message = 'Hee-Ho!', id = 'Undefined', targetid = 'Undefined', dialogueClass = 'Undefined'} = Astro.props;
 import '../styles/jackfrost.css';
 import DialogueButton from '../components/dialogueButton.astro';
 
 ---
 
 <!-- Store the message prop as a data attribute. -->
-<slow-text data-message={message} data-id={id} data-targetid = {targetid}>
+<slow-text data-message={message} data-id={id} data-targetid = {targetid} data-dialogueClass = {dialogueClass}>
 </slow-text>
-<p id = {id}></p>
+<p id = {id} class = {dialogueClass}></p>
 
 
 <script>
@@ -35,6 +35,8 @@ import DialogueButton from '../components/dialogueButton.astro';
       else{
         const button = document.getElementById(targetid);
         button?.addEventListener('click', () => {
+        button.style.display = "none";
+        
         Write();
         });
       }
